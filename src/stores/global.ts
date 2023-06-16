@@ -1,4 +1,4 @@
-import type { PrivateRoutes } from "@/router";
+import type { RouteList } from "@/types";
 import type { UserType } from "@/types";
 import { defineStore } from "pinia";
 import { useRoute } from "vue-router";
@@ -12,8 +12,9 @@ const useGlobalStore = defineStore("global", {
     user: undefined,
   }),
   actions: {
-    isActivePage(url: PrivateRoutes["url"]) {
+    isActivePage(url: RouteList["url"]) {
       const route = useRoute();
+
       return typeof url === "object" && route.name === url.name;
     },
   },

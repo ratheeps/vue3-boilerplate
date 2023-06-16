@@ -1,4 +1,4 @@
-import { ROUTE_NAMES } from "@/constants";
+import { ROUTE_NAMES, ERROR_MESSAGE } from "@/constants";
 import type { RouteRecordRaw } from "vue-router";
 
 const routes: Readonly<RouteRecordRaw[]> = [
@@ -8,7 +8,7 @@ const routes: Readonly<RouteRecordRaw[]> = [
     component: () => import("@/views/Error"),
     props: {
       code: 403,
-      message: 'Forbidden access'
+      message: ERROR_MESSAGE.NOT_FOUND
     },
     meta: {
       layout: 'empty',
@@ -21,7 +21,7 @@ const routes: Readonly<RouteRecordRaw[]> = [
     component: () => import("@/views/Error"),
     props: {
       code: 404,
-      message: 'Seems nothing could be found.'
+      message: ERROR_MESSAGE.NOT_FOUND
     },
     meta: {
       layout: 'empty',
