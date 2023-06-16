@@ -1,13 +1,13 @@
 <template>
   <main>
-   
+
   </main>
 </template>
 
 
 <script lang="ts">
-  defineProps<{
-    code: Number,
-    message: Number,
-  }>();
+defineProps<{
+  code: Number,
+  message: String,
+}>();
 </script>
