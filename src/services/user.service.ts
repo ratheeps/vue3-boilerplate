@@ -12,7 +12,7 @@ interface LogoutProps {
 function logout({ redirect_to = null }: LogoutProps = {}) {
   localStorage.removeItem(USER_KEY);
 
-  const defaultPath: string = getRoutePath(ROUTE_NAMES.HOME)!;
+  const defaultPath: string = getRoutePath(ROUTE_NAMES.DASHBOARD)!;
   const redirectPath: string | null = redirect_to && getRoutePath(redirect_to);
 
   location.replace(redirectPath || defaultPath);
